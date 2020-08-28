@@ -55,3 +55,9 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:airline#extensions#tabline#show_buffers = 1 " enable/disable displaying buffers with a single tab
 let g:airline#extensions#tabline#enabled = 1
 let g:syntastic_python_checkers = ['pyflakes']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
