@@ -15,6 +15,9 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'majutsushi/tagbar'
+Plugin 'universal-ctags/ctags'
+Plugin 'craigemery/vim-autotag'
 Plugin 'rust-lang/rust.vim'
 
 call vundle#end()            " required
@@ -61,3 +64,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+nmap <F8> :TagbarToggle<CR>
+
+syntax on
