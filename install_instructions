@@ -1,0 +1,10 @@
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# brew install python
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+# curl -sL install-node.now.sh/lts | bash
+# cp .alias.sh $HOME
+# cp .bashrc $HOME
+# source $HOME/.bashrc
+# source $HOME/.alias.sh
+# cp .vimrc $HOME
