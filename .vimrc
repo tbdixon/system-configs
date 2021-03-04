@@ -137,3 +137,8 @@ nmap <silent> gr <Plug>(coc-references)
 
 """ Customize colors for popup menuss
 hi Pmenu ctermbg=black ctermfg=white
+
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>w <C-c>:w<cr>
