@@ -32,18 +32,18 @@ set nu
 
 " Indenting
 au BufNewFile, BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \ setlocal tabstop=4
+    \| setlocal softtabstop=4
+    \| setlocal shiftwidth=4
+    \| setlocal textwidth=79
+    \| setlocal expandtab
+    \| setlocal autoindent
+    \| setlocal fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+    \| setlocal softtabstop=2
+    \| setlocal shiftwidth=2
 
 " Syntax help
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
@@ -68,6 +68,7 @@ nmap <c-l> : CtrlPTag<CR>
 set hlsearch
 syntax on
 
+set tags=./tags,tags;$HOME
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 
