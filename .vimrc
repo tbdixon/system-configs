@@ -23,7 +23,7 @@ Plug 'craigemery/vim-autotag'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
-Plug 'pappasam/coc-jedi', { 'branch': 'main' }
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
