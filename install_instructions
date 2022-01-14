@@ -7,3 +7,4 @@
 # source $HOME/.bashrc
 # source $HOME/.alias.sh
 # cp .vimrc $HOME
+# sudo pip install jedi
