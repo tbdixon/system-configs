@@ -23,6 +23,7 @@ Plug 'craigemery/vim-autotag'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
+Plug 'pappasam/coc-jedi', { 'branch': 'main' }
 
 call plug#end()
 
@@ -47,7 +48,7 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \| setlocal shiftwidth=2
 
 " Syntax help
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Enable folding with space bar
 set foldmethod=manual
