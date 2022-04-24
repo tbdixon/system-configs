@@ -5,14 +5,11 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Set up vim-plug -ins
+" Set up vim-plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
 Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
+
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
@@ -23,7 +20,10 @@ Plug 'craigemery/vim-autotag'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'nvie/vim-flake8'
 Plug 'davidhalter/jedi-vim'
+
 
 call plug#end()
 
@@ -33,11 +33,11 @@ set background=dark
 set nu
 
 " Indenting
-au BufNewFile, BufRead *.py
+au BufNewFile, BufRead *.py, *.c, *.cc, *.cpp
     \ setlocal tabstop=4
     \| setlocal softtabstop=4
     \| setlocal shiftwidth=4
-    \| setlocal textwidth=79
+    \| setlocal textwidth=140
     \| setlocal expandtab
     \| setlocal autoindent
     \| setlocal fileformat=unix
@@ -46,9 +46,9 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2
     \| setlocal softtabstop=2
     \| setlocal shiftwidth=2
-
+    
 " Syntax help
-" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.cc,*.cpp match BadWhitespace /\s\+$/
 
 " Enable folding with space bar
 set foldmethod=manual
@@ -58,13 +58,7 @@ let g:SimpylFold_docstring_preview=1
 
 let g:airline#extensions#tabline#show_buffers = 1 " enable/disable displaying buffers with a single tab
 let g:airline#extensions#tabline#enabled = 1
-let g:syntastic_python_checkers = ['pyflakes']
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 nmap <F8> :TagbarToggle<CR>
 nmap <c-l> : CtrlPTag<CR>
 set hlsearch
