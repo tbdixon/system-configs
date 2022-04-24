@@ -1,6 +1,3 @@
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-# brew install python
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # curl -sL install-node.now.sh/lts | bash
 # cp .alias.sh $HOME
 # cp .bashrc $HOME
@@ -8,3 +5,5 @@
 # source $HOME/.alias.sh
 # cp .vimrc $HOME
 # sudo pip install jedi
+###### inside vi
+# :CocInstall coc-clangd
