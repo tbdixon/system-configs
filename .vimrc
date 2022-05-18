@@ -8,8 +8,6 @@ endif
 " Set up vim-plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'tmhedberg/SimpylFold'
-
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
@@ -24,31 +22,20 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
 Plug 'davidhalter/jedi-vim'
 
-
 call plug#end()
 
+set nopaste
 set backspace=indent,eol,start
 set encoding=utf-8
 set background=dark
 set nu
-
-" Indenting
-au BufNewFile, BufRead *.py, *.c, *.cc, *.cpp
-    \ setlocal tabstop=4
-    \| setlocal softtabstop=4
-    \| setlocal shiftwidth=4
-    \| setlocal textwidth=140
-    \| setlocal expandtab
-    \| setlocal autoindent
-    \| setlocal fileformat=unix
-
-au BufNewFile,BufRead *.js,*.html,*.css
-    \ set tabstop=2
-    \| setlocal softtabstop=2
-    \| setlocal shiftwidth=2
-    
-" Syntax help
-" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.cc,*.cpp match BadWhitespace /\s\+$/
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=140
+set expandtab
+set autoindent
+set fileformat=unix
 
 " Enable folding with space bar
 set foldmethod=manual
