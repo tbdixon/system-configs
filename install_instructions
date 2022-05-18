@@ -5,5 +5,6 @@
 # source $HOME/.alias.sh
 # cp .vimrc $HOME
 # sudo pip install jedi
+# sudo brew / apt install clangd (https://clangd.llvm.org/installation.html READ THESE INSTRUCTIONS)
 ###### inside vi
 # :CocInstall coc-clangd
