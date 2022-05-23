@@ -21,6 +21,8 @@ Plug 'lervag/vimtex'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
 Plug 'davidhalter/jedi-vim'
+Plug 'andreyorst/SimpleClangFormat.vim'
+
 
 call plug#end()
 
@@ -54,6 +56,7 @@ syntax on
 set tags=./tags,tags;$HOME
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+
 
 "coc.vim settings from git repo suggestions
 " TextEdit might fail if hidden is not set.
@@ -126,3 +129,19 @@ let mapleader=" "
 nnoremap <SPACE> <Nop>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>w <C-c>:w<cr>
+
+let g:SimpleClangFormat#options = {
+    \ "BasedOnStyle": "webkit",
+    \ "IndentWidth": 4,
+    \ "TabWidth": 4,
+    \ "PointerAlignment": "Left",
+    \ "AlignAfterOpenBracket": "DontAlign",
+    \ "AlignConsecutiveAssignments": "true",
+    \ "AlignConsecutiveDeclarations": "true",
+    \ "AlignTrailingComments": "true",
+    \ "BreakBeforeBraces": "Stroustrup",
+    \ "UseTab": "ForIndentation",
+    \ "SortIncludes": "false",
+    \}
+let g:SimpleClangFormat#useShiftWidth = 1
+let g:SimpleClangFormat#useTabStop = 1
