@@ -9,7 +9,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -23,8 +22,12 @@ Plug 'nvie/vim-flake8'
 Plug 'davidhalter/jedi-vim'
 Plug 'andreyorst/SimpleClangFormat.vim'
 
-
 call plug#end()
+
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>w <C-c>:w<cr>
 
 set nopaste
 set backspace=indent,eol,start
@@ -121,14 +124,10 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent><nowait> <leader>o  :<C-u>CocList outline<cr>
 
 """ Customize colors for popup menuss
 hi Pmenu ctermbg=black ctermfg=white
-
-let mapleader=" "
-nnoremap <SPACE> <Nop>
-nnoremap <leader>w :w<cr>
-nnoremap <leader>w <C-c>:w<cr>
 
 let g:SimpleClangFormat#options = {
     \ "BasedOnStyle": "webkit",
